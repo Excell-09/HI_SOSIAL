@@ -3,7 +3,7 @@ import OtherServiceCard from "./other-service-card/otherServiceCard";
 
 const OtherService = ({ t }) => {
   return (
-    <section className="lg:pb-8">
+    <section className="lg:pb-8 container">
       <div className="mb-10 lg:flex lg:flex-col lg:items-center">
         <h1 className="mb-5 lg:mb-10 font-clash-display font-medium text-2xl md:text-4xl lg:text-5xl">{t("Home.other-service.title")}</h1>
         <p className="text-justify text-base lg:text-xl lg:w-[859px] lg:text-center">{t("Home.other-service.descript")}</p>

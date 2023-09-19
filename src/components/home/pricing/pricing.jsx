@@ -23,7 +23,7 @@ const Pricing = ({ t }) => {
   ];
 
   return (
-    <section>
+    <section className="bg-white container">
       <h1 className="font-medium font-clash-display text-2xl mb-4 md:text-4xl lg:text-5xl">{t("Home.pricing.title")}</h1>
       <div className="md:flex md:justify-between">
         <p className="text-justify mb-2 md:text-lg md:w-96 lg:text-xl lg:w-[652px]">{t("Home.pricing.descript")}</p>
