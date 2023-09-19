@@ -1,8 +1,11 @@
 const ListServices = ({ number, text }) => {
   return (
-    <section className="bg-white my-4 p-3 rounded-md shadow-md lg:my-8">
+    <section className="bg-white p-3 rounded-md shadow-md">
       <div className="flex space-x-4 items-center ">
-        <p className="py-2 px-3 bg-blue-500 text-white rounded-full font-semibold lg:p-4 lg:text-3xl">{number}</p>
+        <p className="p-3 bg-blue-400 text-white rounded-full font-semibold lg:w-[68px] lg:h-[68px] lg:text-3xl flex justify-center items-center">
+          {number}
+        </p>
+
         <h1 className="font-semibold lg:text-3xl">{text}</h1>
       </div>
     </section>
