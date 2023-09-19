@@ -23,7 +23,7 @@ body {
 
 @layer utilities {
   .gradient-img-otherService {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.14) 0%, #012840 89.04%);
+    background: linear-gradient(180deg,  #0128405e 0%,#ffffff25 100%);
   }
   .gradient-img-about {
     background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, #001520 100%);
