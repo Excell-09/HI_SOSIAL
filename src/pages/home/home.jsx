@@ -12,7 +12,6 @@ import {
 const Home = ({ t }) => {
   return (
     <section className="pt-28 md:pt-30 lg:pt-20 flex flex-col items-center">
-      {/* max-w-[1920px] flex flex-col items-center justify-center space-y-12 md:space-y-24 lg:space-y-32 */}
       <div className="space-y-12 md:space-y-24 lg:space-y-32">
         <Banner t={t} />
         <OurWork t={t} />
