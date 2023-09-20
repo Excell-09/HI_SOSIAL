@@ -3,7 +3,7 @@ import { shoes, lotion, fruit } from "../../../assets/img/index";
 
 const OurProject = ({ t }) => {
   return (
-    <section className="container">
+    <section className="AppContainer">
       <div className="mb-7 md:flex md:space-x-10 md:items-end lg:items-center lg:mb-16 lg:justify-between">
         <h1 className="font-medium font-clash-display text-2xl md:text-4xl lg:text-5xl text-slate-600">
           {t("Home.our-project.title")}

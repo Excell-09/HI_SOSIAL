@@ -2,7 +2,7 @@ import CardTesti from "./card-testi/cardTesti";
 
 const Testi = ({ t }) => {
   return (
-    <section className="container">
+    <section className="AppContainer">
       <h1 className="text-center font-medium text-2xl md:text-4xl lg:text-6xl">
         {t("Home.testi.title")}
         <br />

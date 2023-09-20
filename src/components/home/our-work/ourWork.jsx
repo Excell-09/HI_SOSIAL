@@ -5,7 +5,7 @@ import ListExperience from "./list-experience/listExperience";
 
 const OurWork = ({ t }) => {
   return (
-    <section className="md:grid md:grid-cols-2 md:gap-x-10 md:justify-items-end md:items-center lg:gap-x-14 container">
+    <section className="md:grid md:grid-cols-2 md:gap-x-10 md:justify-items-end md:items-center lg:gap-x-14 AppContainer">
       <div>
         <h1 className="font-clash-display text-2xl font-medium md:text-3xl lg:text-5xl mb-[56px]">
           {t("Home.our-work.text-one")}

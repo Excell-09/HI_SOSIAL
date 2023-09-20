@@ -2,7 +2,7 @@ import { eduwork, elvron, sisko, upscale } from "../../../assets/patner/index";
 import OurPatnerCard from "./our-patner-card/ourPatnerCard";
 const OurPatner = ({ t }) => {
   return (
-    <section className="flex flex-col items-center justify-center md:flex-row md:justify-between space-y-5 md:space-x-2 container">
+    <section className="flex flex-col items-center justify-center md:flex-row md:justify-between space-y-5 md:space-x-2 AppContainer">
       <div className="space-y-3">
         <div className="w-full text-sky-500">
           <h1 className="font-clash-display font-medium text-2xl md:text-4xl lg:text-5xl">

@@ -3,7 +3,7 @@ import ListServices from "./list-services/listServices";
 
 const SeveralService = ({ t }) => {
   return (
-    <section className="container">
+    <section className="AppContainer">
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:items-center">
         <div className="w-full">
           <h1 className="max-w-[552px] font-medium font-clash-display text-2xl md:text-4xl lg:text-6xl">

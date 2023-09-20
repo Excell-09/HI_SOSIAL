@@ -4,8 +4,8 @@ import HighligtBanner from "./highligt-banner/highligtBanner";
 
 const Banner = ({ t }) => {
   return (
-    <section className="lg:mt-[57px] container">
-      <div className="flex  flex-col lg:flex-row gap-5 lg:-16">
+    <section className="lg:mt-[57px] AppContainer">
+      <div className="flex flex-col lg:flex-row gap-5 lg:-16">
         <div className="flex-1 font-plus-jakarta-sans">
           <div className="md:w-full lg:w-4/5 lg:mt-10">
             <h1 className="font-clash-display text-4xl font-medium mb-7 lg:text-5xl">

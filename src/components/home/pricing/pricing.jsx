@@ -30,8 +30,8 @@ const Pricing = ({ t }) => {
   ];
 
   return (
-    <section className="bg-white py-10">
-      <div>
+    <section className="bg-red-500 py-10 w-full">
+      <div className="">
         <h1 className="font-medium font-clash-display text-2xl mb-4 md:text-4xl lg:text-5xl text-center text-sky-500">
           {t("Home.pricing.title")}
         </h1>
@@ -39,12 +39,9 @@ const Pricing = ({ t }) => {
           <p className="mb-2 md:text-lg lg:text-xl lg:w-[652px] text-center mx-auto">
             {t("Home.pricing.descript")}
           </p>
-          {/* <button className="btn-blue rounded-full  font-medium md:h-14 md:text-lg lg:h-12 lg:w-64">
-            {t("Home.pricing.button-text")}
-          </button> */}
         </div>
 
-        <div className=" mt-10  md:mt-14 justify-items-center lg:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-0">
+        <div className="mt-10 md:mt-14 justify-items-center lg:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-0">
           <CardPricing
             t={t}
             imgPricing={hiBronze}
@@ -54,7 +51,6 @@ const Pricing = ({ t }) => {
             list={listServicePricing}
             additional={additionalBronze}
           />
-
           <CardPricing
             t={t}
             imgPricing={hiSilver}
@@ -64,7 +60,6 @@ const Pricing = ({ t }) => {
             list={listServicePricing}
             additional={additionalSilver}
           />
-
           <CardPricing
             t={t}
             imgPricing={hiGold}
