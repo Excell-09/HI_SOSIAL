@@ -1,7 +1,6 @@
 const HighligtBanner = ({ t, className }) => {
   return (
-    <section
-      className={`px-5 py-7 bg-blue-500 text-white rounded-lg ${className}`}>
+    <section className={`p-5 bg-blue-500 text-white rounded-lg ${className}`}>
       <p className="font-clash-display text-xl font-medium md:text-2xl lg:text-5xl md:col-span-2 lg:hidden text-center">
         {t("Home.banner.highlight-banner")}
       </p>
