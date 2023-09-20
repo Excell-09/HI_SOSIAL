@@ -30,8 +30,8 @@ const Pricing = ({ t }) => {
   ];
 
   return (
-    <section className="bg-red-500 py-10 w-full">
-      <div className="">
+    <section className="bg-white py-10 w-screen">
+      <div className="AppContainer">
         <h1 className="font-medium font-clash-display text-2xl mb-4 md:text-4xl lg:text-5xl text-center text-sky-500">
           {t("Home.pricing.title")}
         </h1>
@@ -41,7 +41,7 @@ const Pricing = ({ t }) => {
           </p>
         </div>
 
-        <div className="mt-10 md:mt-14 justify-items-center lg:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-0">
+        <div className="mt-10 md:mt-14 justify-items-center lg:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
           <CardPricing
             t={t}
             imgPricing={hiBronze}
