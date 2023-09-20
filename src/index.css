@@ -21,7 +21,7 @@ body {
   }
 
   .AppContainer{
-    @apply max-w-[1110px] m-auto px-3
+    @apply max-w-[1110px] mx-auto px-3
   }
 }
 
