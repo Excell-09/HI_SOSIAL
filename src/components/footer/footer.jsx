@@ -1,13 +1,15 @@
 import { logoFooter } from "../../assets/img/index";
-import { RiFacebookCircleLine } from "../../../node_modules/react-icons/ri";
-import { AiOutlineLinkedin } from "../../../node_modules/react-icons/ai";
-import { BsWhatsapp } from "../../../node_modules/react-icons/bs";
-import { MdEmail } from "../../../node_modules/react-icons/md";
-import { ImLocation2 } from "../../../node_modules/react-icons/im";
-import { FaInstagram } from "../../../node_modules/react-icons/fa";
+import { RiFacebookLine } from "../../../node_modules/react-icons/ri";
+import {
+  AiOutlineTwitter,
+  AiOutlineInstagram,
+  AiOutlineGithub,
+} from "../../../node_modules/react-icons/ai";
 import ContactUs from "./contact-us/contactUs";
 import SocialMedia from "./social-media/socialMedia";
 import Category from "./category/category";
+import NewsLetter from "./newsletter/NewsLetter";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const link = {
@@ -18,35 +20,109 @@ const Footer = () => {
     email: "mailto: hidigital.info@gmail.com",
     maps: "https://www.google.com/maps/place/Jl.+Ring+Road+Utara+No.34,+Jenengan,+Maguwoharjo,+Kec.+Depok,+Kabupaten+Sleman,+Daerah+Istimewa+Yogyakarta+55283/@-7.7635557,110.4186218,17z/data=!3m1!4b1!4m6!3m5!1s0x2e7a5988bf08e72f:0x3d6b8f2631a429f8!8m2!3d-7.7635557!4d110.4211967!16s%2Fg%2F11f3tgd2xp?entry=ttu",
   };
+
+  const COMPANYLINK = [
+    { display: "About", href: "/" },
+    { display: "Features", href: "/" },
+    { display: "Works", href: "/" },
+    { display: "Career", href: "/" },
+  ];
+
+  const HELPLINK = [
+    { display: "Customer Support", href: "/" },
+    { display: "Delivery Details", href: "/" },
+    { display: "Terms & Conditions", href: "/" },
+    { display: "Privacy Policy", href: "/" },
+  ];
+
+  const RESOURCESLINK = [
+    { display: "Free eBooks", href: "/" },
+    { display: "Development Tutorial", href: "/" },
+    { display: "How to - Blog", href: "/" },
+    { display: "Youtube Playlist", href: "/" },
+  ];
+
   return (
-    <section className="mt-20">
-      <div className="bg-blue-950 flex justify-center p-5 items-center font-plus-jakarta-sans md:mt-24 lg:mt-36 lg:p-24">
-        <div className="grid grid-cols-2 md:justify-items-center lg:grid-cols-4 lg:gap-8 ">
-          <div className="flex space-x-2 md:space-x-3 items-center lg:items-start ">
-            <img src={logoFooter} className="h-16 md:h-20 lg:h-auto" />
-            <p className="text-white font-extrabold md:text-xl lg:mt-3">
+    <section className="mt-20 AppContainer mb-[198px]">
+      <NewsLetter />
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        <article>
+          <div className="flex space-x-2 md:gap-2 items-center">
+            <img src={logoFooter} className="h-14 md:h-14 lg:h-18" />
+            <p className="font-extrabold md:text-lg ">
               HiSocial <br />
               Digital
             </p>
           </div>
-          <div className="hidden lg:block  lg:w-52">
-            <div className="flex space-x-10 mb-5">
-              <SocialMedia icons={<FaInstagram />} link={link.instagram} />
-              <SocialMedia icons={<RiFacebookCircleLine />} link={link.fb} />
-              <SocialMedia icons={<AiOutlineLinkedin />} link={link.linkedIn} />
-            </div>
-            <p className="text-white text-base">HiSocial Digital gives you ease in learning and improving your skills to become a professional.</p>
+
+          <p className="text-sm text-gray-600 mt-10">
+            HiSocial Digital gives you ease in learning and improving your
+            skills to become a professional.
+          </p>
+
+          <div className="flex gap-3 mt-12">
+            <SocialMedia
+              icons={
+                <AiOutlineTwitter className="text-4xl text-black border-[2px] rounded-full p-1 font-bold" />
+              }
+              link={link.instagram}
+            />
+            <SocialMedia
+              icons={
+                <RiFacebookLine className="text-4xl bg-blue-600 text-white rounded-full p-2 font-bold" />
+              }
+              link={link.instagram}
+            />
+            <SocialMedia
+              icons={
+                <AiOutlineInstagram className="text-4xl text-black border-[2px] rounded-full p-1 font-bold" />
+              }
+              link={link.fb}
+            />
+            <SocialMedia
+              icons={
+                <AiOutlineGithub className="text-4xl text-black border-[2px] rounded-full p-1 font-bold" />
+              }
+              link={link.linkedIn}
+            />
           </div>
-          <Category />
-          <div className="text-white ms-4 lg:w-64">
-            <h1 className="font-semibold mb-2 md:text-lg">Contact Us</h1>
-            <ContactUs icons={<BsWhatsapp />} text="+6281 8900 8786" link={link.wa} />
-            <ContactUs icons={<MdEmail />} text="hidigital.info@gmail.com" link={link.email} />
-            <ContactUs icons={<ImLocation2 />} text="Jl. Ring Road Utara No.34, Sanggrahan, Maguwoharjo, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281" link={link.maps} />
+        </article>
+        <article className=" md:max-w-max md:mx-auto">
+          <h3 className="mb-[8px] font-semibold text-blue-500">COMPANY</h3>
+          <div className="flex flex-col text-gray-600 gap-3 text-sm">
+            {COMPANYLINK.map((item, i) => (
+              <Link key={i} to={item.href}>
+                {item.display}
+              </Link>
+            ))}
           </div>
-        </div>
+        </article>
+        <article className=" md:max-w-max md:mx-auto">
+          <h3 className="mb-[8px] font-semibold text-blue-500">HELP</h3>
+          <div className="flex flex-col text-gray-600 gap-3 text-sm">
+            {HELPLINK.map((item, i) => (
+              <Link key={i} to={item.href}>
+                {item.display}
+              </Link>
+            ))}
+          </div>
+        </article>
+        <article className=" lg:max-w-max lg:mx-auto">
+          <h3 className="mb-[8px] font-semibold text-blue-500">Resources</h3>
+          <div className="flex flex-col text-gray-600 gap-3 text-sm">
+            {RESOURCESLINK.map((item, i) => (
+              <Link key={i} to={item.href}>
+                {item.display}
+              </Link>
+            ))}
+          </div>
+        </article>
       </div>
-      <div className="bg-blue-500 p-2 text-white text-xs text-center md:text-sm">© 2022 HISOCIAL DIGITAL ALL RIGHTS RESERVEDOWNED BY PT TALENTA SINERGI GROUP</div>
+      <hr className="mt-[84px]" />
+      <p className="p-2 text-gray-600 text-xs text-center md:text-sm mt-[35px]">
+        © 2022 HISOCIAL DIGITAL ALL RIGHTS RESERVEDOWNED BY PT TALENTA SINERGI
+        GROUP
+      </p>
     </section>
   );
 };
