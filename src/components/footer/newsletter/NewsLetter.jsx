@@ -24,7 +24,7 @@ function ButtonSubscribe() {
 
 export default function NewsLetter() {
   return (
-    <article className="bg-blue-600 rounded-[20px] grid  min-h-[350px] md:min-h-[286px] relative overflow-hidden mb-[90px]">
+    <article className="bg-blue-600 rounded-[20px] grid  min-h-[350px] md:min-h-[286px] relative overflow-hidden mb-[90px] px-5">
       <img
         src="/Hi-Social/ringnewslettergray.png"
         className="absolute -top-28 -left-28 rotate-45"
