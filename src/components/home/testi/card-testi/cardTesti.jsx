@@ -3,7 +3,7 @@ import ProfileTesti from "./ProfileTesti";
 
 const CardTesti = ({ t }) => {
   return (
-    <article className="p-2 bg-white rounded-2xl md:space-x-5 md:justify-center md:flex md:items-center lg:justify-between 2xl:justify-around shadow-lg max-w-[538px]">
+    <article className="p-2 bg-white rounded-2xl md:space-x-5 md:justify-center md:flex md:items-center lg:justify-between 2xl:justify-around shadow-lg">
       <div className="flex ">
         <ProfileTesti
           jobtitle={t("Home.testi.job")}
