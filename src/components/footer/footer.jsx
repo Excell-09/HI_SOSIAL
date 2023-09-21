@@ -5,9 +5,7 @@ import {
   AiOutlineInstagram,
   AiOutlineGithub,
 } from "../../../node_modules/react-icons/ai";
-import ContactUs from "./contact-us/contactUs";
 import SocialMedia from "./social-media/socialMedia";
-import Category from "./category/category";
 import NewsLetter from "./newsletter/NewsLetter";
 import { Link } from "react-router-dom";
 
