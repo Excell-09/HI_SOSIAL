@@ -1,12 +1,37 @@
+import { useState } from "react";
 import CardTesti from "./card-testi/cardTesti";
 
 const Testi = ({ t }) => {
+  const [selectedTesti, setSeletecedTesti] = useState(0);
   const title = t("Home.testi.title")
     .replace("HiSocial Digital", ",")
     .split(",");
   const titleSpan = t("Home.testi.title")
     .replace("What's the review from them about the", "")
     .replace("?", "");
+
+  const TESTILIST = [
+    <CardTesti t={t} />,
+    <CardTesti t={t} />,
+    <CardTesti t={t} />,
+    <CardTesti t={t} />,
+  ];
+
+  const handleTesti = (action) => {
+    setSeletecedTesti((value) => {
+      if (action === "i") {
+        if (value === TESTILIST.length - 1) {
+          return 0;
+        }
+        return ++value;
+      } else {
+        if (value === 0) {
+          return value;
+        }
+        return --value;
+      }
+    });
+  };
 
   return (
     <section className="w-screen">
@@ -17,19 +42,24 @@ const Testi = ({ t }) => {
       </h1>
       <div className="relative AppContainer">
         <img
+          onClick={() => handleTesti("d")}
           src="/Hi-Social/arrowtesti.png"
           className="absolute top-1/2 -left-8 z-10 -translate-y-1/2 cursor-pointer"
           alt=""
         />
         <img
+          onClick={() => handleTesti("i")}
           src="/Hi-Social/arrowtesti.png"
           className="absolute top-1/2 -right-8 z-10 -translate-y-1/2 rotate-180 cursor-pointer"
           alt=""
         />
-        <div className="grid grid-cols-1 lg:grid-cols-2 flex-nowrap overflow-x-auto gap-5 pb-10 pt-8 lg:pt-12">
-          {[1, 2].map((i) => (
-            <CardTesti t={t} key={i} />
-          ))}
+        <div className="flex lg:hidden gap-5 pb-10 pt-8 md:pt-12 scroll-smooth">
+          {TESTILIST[selectedTesti]}
+        </div>
+
+        <div className="hidden lg:flex gap-5 pb-10 pt-8 md:pt-12 scroll-smooth">
+          {TESTILIST[selectedTesti]}
+          {TESTILIST[(selectedTesti + 1) % TESTILIST.length]}
         </div>
       </div>
     </section>
