@@ -7,7 +7,7 @@ const Banner = ({ t }) => {
     <section className="lg:mt-[57px] AppContainer">
       <div className="flex flex-col lg:flex-row gap-5 lg:-16">
         <div className="flex-1 font-plus-jakarta-sans">
-          <div className="md:w-full lg:w-4/5 lg:mt-10">
+          <div className="md:w-full lg:w-11/12 lg:mt-10">
             <h1 className="font-clash-display text-4xl font-medium mb-7 lg:text-5xl">
               {t("Home.banner.title")}
             </h1>
@@ -27,7 +27,7 @@ const Banner = ({ t }) => {
         <div className="flex-1 flex flex-col overflow-hidden">
           <img
             src={bannerImage}
-            className="md:h-[450px] md:w-full lg:h-[424px] lg:w-[570px] object-cover rounded-lg mb-[10px]"
+            className="md:h-[450px] md:w-full lg:h-[424px] lg:w-[570px] rounded-lg mb-[10px] object-cover"
           />
           <HighligtBanner t={t} className={"md:w-full"} />
         </div>
