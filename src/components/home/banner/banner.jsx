@@ -8,10 +8,10 @@ const Banner = ({ t }) => {
       <div className="flex flex-col lg:flex-row gap-5 lg:-16">
         <div className="flex-1 font-plus-jakarta-sans">
           <div className="md:w-full lg:w-11/12 lg:mt-10">
-            <h1 className="font-clash-display text-4xl font-medium mb-7 lg:text-5xl">
+            <h1 className="font-clash-display text-4xl font-medium mb-5 md:mb-7 lg:text-5xl">
               {t("Home.banner.title")}
             </h1>
-            <div className="text-sm md:text-base font-normal space-y-6 lg:mb-10 mb-10">
+            <div className="text-sm md:text-base font-normal space-y-3 mb:space-y-6 lg:mb-10 mb-5">
               <p>{t("Home.banner.descript1")}</p>
               <p>{t("Home.banner.descript2")}</p>
             </div>
