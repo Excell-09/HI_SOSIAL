@@ -1,6 +1,6 @@
 export default function ProfileTesti({ userImage, username, jobtitle }) {
   return (
-    <div className="relative flex-1 overflow-hidden max-w-max gradient-img-testi rounded-xl hidden sm:block">
+    <div className="relative flex-1 overflow-hidden max-w-max gradient-img-testi rounded-xl">
       <div className="relative">
         <img
           src={userImage}

@@ -2,12 +2,15 @@ import { useState } from "react";
 import CardTesti from "./card-testi/cardTesti";
 
 const Testi = ({ t }) => {
+  console.log(t("Home.testi.title"));
   const [selectedTesti, setSeletecedTesti] = useState(0);
   const title = t("Home.testi.title")
     .replace("HiSocial Digital", ",")
+    .replace("Mitra Kami", "")
     .split(",");
   const titleSpan = t("Home.testi.title")
     .replace("What's the review from them about the", "")
+    .replace("Pengalaman", "")
     .replace("?", "");
 
   const TESTILIST = [
@@ -37,8 +40,7 @@ const Testi = ({ t }) => {
     <section className="w-screen">
       <h1 className="text-center font-medium text-2xl md:text-3xl lg:text-4xl">
         {title[0]}
-        <span className="text-blue-500">{titleSpan}</span>
-        {title[1]}
+        <span className="text-blue-500"> {titleSpan}</span> ?
       </h1>
       <div className="relative AppContainer">
         <img
