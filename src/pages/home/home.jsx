@@ -12,7 +12,7 @@ import {
 const Home = ({ t }) => {
   return (
     <section className="pt-28 md:pt-30 lg:pt-20 flex flex-col items-center">
-      <div className="space-y-12 md:space-y-24 lg:space-y-32">
+      <div className="space-y-16 md:space-y-24 lg:space-y-[140px]">
         <Banner t={t} />
         <OurWork t={t} />
         <SeveralService t={t} />
