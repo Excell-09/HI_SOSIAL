@@ -14,9 +14,9 @@ const SeveralService = ({ t }) => {
           {t("Home.several-services.descript")}
         </p>
       </div>
-      <div className="mt-7 grid grid-cols-1 md:mt-9 md:gap-x-12 items-center md:grid-cols-2 lg:mt-12 lg:gap-x-8">
+      <div className="mt-7 grid grid-cols-1 md:mt-9 items-center md:grid-cols-2 lg:mt-12 sm:gap-5 lg:gap-0">
         <CardSeveralService />
-        <div className="flex flex-col h-full justify-between">
+        <div className="flex flex-col h-full justify-between gap-3 md:gap-0">
           <ListServices
             number="01."
             text={t("Service.service-program.list-program.list-1")}
